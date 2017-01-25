@@ -111,7 +111,7 @@
 
                     <p>On va expliquer d'une manière simple l'idée de la blockchain en se basant sur le Bitcoin puisque le concepet de la blockchain a pris naissance avec cette monnaie éléctronique.</p>
 
-                    <p>Tout d'abord un point trés important est que la blokchain est un système  decentralisée càd la base de données de toutes les transactions  n'est pas gérée par une instance centrale comme une banque mais elle est partagée dans un immense réseau peer to peer .D'ou tous les gens connectés au réseau bitcoin peuvent heberger une copie de la base de données qui contiennent toutes les transactions </p>
+                    <p>Tout d'abord un point trés important est que la blokchain est un système  decentralisée càd la base de données de toutes les transactions  n'est pas gérée par une instance centrale comme une banque mais elle est partagée dans un immense réseau peer to peer .D'ou tous les gens connectés au réseau peuvent heberger une copie de la base de données qui contiennent toutes les transactions </p>
 
                     <a href="#">
                         <img class="img-responsive" src="peer_to_peer.png" alt="">
@@ -127,12 +127,53 @@
                     </a>  
     <blockquote>Chiffrage asymétrique : c'est le faite qu'on chiffre le message avec une clé et on le déchiffre avec une autre clé </blockquote>
                     
-                    <p>On parle donc de l'existance de deux clés publique que tous le monde peut obtenir et privé que seule la personne conçernée la possède </p>
+                    <p>On parle donc de l'existance de deux clés :une publique que tous le monde peut obtenir et une  privée que seule la personne conçernée la possède </p>
                     <p>En fait la personne A chiffre avec sa clé privé le message de la transaction "Moi personne A je donne 2 Bitcoins à la personne B" et inscrit ce msg chiffré dans la base de données et les autres personnes peuvent déchiffrer le message avec la clé publique et comme ça on est sur que cette personne a inscrit cette transaction puisque c'est le seul qui a pu la chiffrer de cette façon  </p>
+
+
+                   
+
+
+                    <p> </p>
 
                     <a href="#">
                         <img class="img-responsive" src="cle_priv_pub.png" alt="">
                     </a> 
+
+
+                 <p>Maintenant un autre problème c'est qu'on a plein de copies de la base de données ce qui pose des soucies sur la manière dont ces copies se communiquent . Ce problème devient claire notamment dans le cas d'une tentative de déclaration d'une transaction deux fois dans le réseau dans des places différentes Alors comment le système de la blockchain gère ça ? </p>
+
+
+                 <p>En fait chaque noeud du réseau enregistre les nouvelles transactions dans une liste en attente . Alors les noeuds possèdent des listes en attente différentes les unes des autres .A chaque 10 minutes un noeud prende sa liste en attente et la déclare validée et les autres noeuds se synchronisent avec ce noeud at ainsi de suite à chaque 10 minutes on a une liste qui s'appelle un bloc qui sera validé et d'ou le nom blockchain ou chaine de blocs </p>
+
+                 <a href="#">
+                        <img class="img-responsive" src="noeud.png" alt="">
+                    </a> 
+
+                 <p>Mais comment est élu le noeud qui va valider son bloc ? En fait chaque noeud essaye de trouver un identifiant de son bloc et ceci à travers une fonction de hashage qui prend en entrée un fichier contenant l'identifiant du bloc précédant , la liste des transactions et un nombre qui s'appelle nonce (ajouté pour des raisons de sécurité ) pour fabriquer ainsi avec une foonction de hashage son identifiant et cet identifiant va servir pour calculer l'identifiant du bloc suivant .
+               <a href="#">
+                        <img class="img-responsive" src="hashage.png" alt="">
+                    </a> 
+
+ L'intêret de ce système est de protéger la base de données de toutes modification , si on change une transaction ceci ça va changer le hashage et donc ça va changer l'identifiant ce qui implique de modifier l'identifiant du bloc et aisi de suite donc ça devient extremement difficile de modifier une transaction dans le passé. </p>
+
+                 <p>A chaque 10 minutes chaque noeud va essayer de trouver un identifiant et celui qui résoud le problème le premier sera élu et donc tous le monde le suit et ainsi de suite toutes les 10 minutes </p>
+
+                    <a href="#">
+                        <img class="img-responsive" src="bloc_hash.png" alt="">
+                    </a> 
+
+                    </br>
+
+                    </br>
+
+
+
+                    <a href="#">
+                        <img class="img-responsive" src="falsif.png" alt="">
+                    </a> 
+
+                  
                     <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
                 </div>
             </div>
