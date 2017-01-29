@@ -91,7 +91,7 @@
 
                  <h2 class="section-heading">Introduction </h2>
                     
-                    <p>Les nouvelles technologies ont permis aux individus de communiquer et de s'organiser entre eux directement sans passer par un intermidiare mais lorsqu'un échange implique un transfert de valeur nous avons besoin d'un tiers de confiance , il faut passer par une banque pour transmettre de l'argent ou par un notaire pour ceder une propriété . La supervision d'un tiers de confiance n'est pourtant pas sans risque ce qui explique que nous perdions peu à peu confiance dans nos institutions</p>
+                    <p>Les nouvelles technologies ont permis aux individus de communiquer et de s'organiser entre eux directement sans passer par un intermidiare mais lorsqu'un échange implique un transfert de valeur nous avons besoin d'un tiers de confiance , il faut passer par une banque pour transmettre de l'argent ou par un notaire pour céder une propriété . La supervision d'un tiers de confiance n'est pourtant pas sans risque ce qui explique que nous perdions peu à peu confiance dans nos institutions</p>
 
                     <p>Aujourd'hui la blokchain offre une alternative innovante au schéma actuel en promettant de résoudre les problèmes intrinséques du fonctionnement des tiers de confiance.Ce concept est né avec la monnaie electronique Bitcoin et son inventaire un certain Satoshi Nakamoto (qui peut être une personne ou un groupe de personnes). Depuis ce temps la certains specialistes la considère comme la deuxième révolution aprés l'internet. Mais une question qui se pose qu'est ce que la blockchain ?</p>
 
@@ -111,7 +111,7 @@
 
                     <p>On va expliquer d'une manière simple l'idée de la blockchain en se basant sur le Bitcoin puisque le concepet de la blockchain a pris naissance avec cette monnaie éléctronique.</p>
 
-                    <p>Tout d'abord un point trés important est que la blokchain est un système  decentralisée càd la base de données de toutes les transactions  n'est pas gérée par une instance centrale comme une banque mais elle est partagée dans un immense réseau peer to peer .D'ou tous les gens connectés au réseau peuvent heberger une copie de la base de données qui contiennent toutes les transactions </p>
+                    <p>Tout d'abord un point trés important est que la blokchain est un système  decentralisée càd la base de données de toutes les transactions  n'est pas gérée par une instance centrale comme une banque mais elle est partagée dans un immense réseau peer to peer .D'ou tous les utilisateurs connectés au réseau peuvent heberger une copie de la base de données qui contiennent toutes les transactions </p>
 
                     <a href="#">
                         <img class="img-responsive" src="peer_to_peer.png" alt="">
@@ -134,34 +134,41 @@
                    
 
 
-                    <p> </p>
+                    
 
                     <a href="#">
                         <img class="img-responsive" src="cle_priv_pub.png" alt="">
                     </a> 
+                     <blockquote>Shéma montrant que la clé privé doit être secrète et que tout le monde possède la clé publique </blockquote>
 
 
-                 <p>Maintenant un autre problème c'est qu'on a plein de copies de la base de données ce qui pose des soucies sur la manière dont ces copies se communiquent . Ce problème devient claire notamment dans le cas d'une tentative de déclaration d'une transaction deux fois dans le réseau dans des places différentes Alors comment le système de la blockchain gère ça ? </p>
+                 <p>Maintenant un autre problème c'est qu'on a plein de copies de la base de données ce qui pose des soucies sur la manière dont ces copies se communiquent . Ce problème devient clair notamment dans le cas d'une tentative de déclaration d'une transaction deux fois dans le réseau dans des places différentes Alors comment le système de la blockchain gère ça ? </p>
 
 
-                 <p>En fait chaque noeud du réseau enregistre les nouvelles transactions dans une liste en attente . Alors les noeuds possèdent des listes en attente différentes les unes des autres .A chaque 10 minutes un noeud prende sa liste en attente et la déclare validée et les autres noeuds se synchronisent avec ce noeud at ainsi de suite à chaque 10 minutes on a une liste qui s'appelle un bloc qui sera validé et d'ou le nom blockchain ou chaine de blocs </p>
+                 <p>En fait chaque noeud du réseau enregistre les nouvelles transactions dans une liste en attente . Alors les noeuds possèdent des listes en attente différentes les unes des autres .A chaque 10 minutes un noeud prende sa liste en attente et la déclare validée et les autres noeuds se synchronisent avec ce noeud . Ainsi  chaque 10 minutes on a une liste ,qui s'appelle un bloc, qui sera validé  d'ou le nom blockchain ou chaine de blocs </p>
 
                  <a href="#">
                         <img class="img-responsive" src="noeud.png" alt="">
                     </a> 
+                     <blockquote>Un noeud trouve son identifiant et déclare son bloc validé</blockquote>
 
-                 <p>Mais comment est élu le noeud qui va valider son bloc ? En fait chaque noeud essaye de trouver un identifiant de son bloc et ceci à travers une fonction de hashage qui prend en entrée un fichier contenant l'identifiant du bloc précédant , la liste des transactions et un nombre qui s'appelle nonce (ajouté pour des raisons de sécurité ) pour fabriquer ainsi avec une foonction de hashage son identifiant et cet identifiant va servir pour calculer l'identifiant du bloc suivant .
+                 <p>Mais comment est élu le noeud qui va valider son bloc ? En fait chaque noeud essaye de trouver un identifiant de son bloc et ceci à travers une fonction de hashage qui prend en entrée un fichier contenant l'identifiant du bloc précédant , la liste des transactions et un nombre qui s'appelle nonce (ajouté pour des raisons de sécurité ) pour fabriquer ainsi avec une fonction de hashage son identifiant et cet identifiant va servir pour calculer l'identifiant du bloc suivant .</p>
                <a href="#">
                         <img class="img-responsive" src="hashage.png" alt="">
                     </a> 
+                   <blockquote>Principe de hashage </blockquote>
 
- L'intêret de ce système est de protéger la base de données de toutes modification , si on change une transaction ceci ça va changer le hashage et donc ça va changer l'identifiant ce qui implique de modifier l'identifiant du bloc et aisi de suite donc ça devient extremement difficile de modifier une transaction dans le passé. </p>
+                  <p>Récapitulons donc!Chaque 10 minutes,les noeuds (qui sont les mineurs) vont  essayer de trouver leurs  identifiants et celui qui résoud le problème le premier sera élu et donc tous le monde le suit et un nouveu bloc se crée. </p>
 
-                 <p>A chaque 10 minutes chaque noeud va essayer de trouver un identifiant et celui qui résoud le problème le premier sera élu et donc tous le monde le suit et ainsi de suite toutes les 10 minutes </p>
+<p>
+                  L'intêret de ce système est de protéger la base de données de toute modification , si on change une transaction ceci modifie  le hashage et donc  l'identifiant du bloc ce qui implique de modifier l'identifiant du bloc suivant aussi et ainsi de suite.Donc ça devient extêmement difficile de modifier une transaction dans le passé. </p>
 
+                 
+                   
                     <a href="#">
                         <img class="img-responsive" src="bloc_hash.png" alt="">
                     </a> 
+                     <blockquote>Shéma montrant le rôle du hashage dans la construction de la chaine des blocs </blockquote>
 
                     </br>
 
@@ -172,9 +179,16 @@
                     <a href="#">
                         <img class="img-responsive" src="falsif.png" alt="">
                     </a> 
+                     <blockquote>Impacts de la modification d'un bloc sur toute la chaîne de blocs </blockquote>
+
+
+                    <p>Comme on a dit auparavant , pour réaliser cette opération de validation, les mineurs utilisent des machines onéreuses et énergivores . Pour cette raison ils  sont rémunérés en conséquence par exemple aujourd'hui un mineur gagne 12,5 Bitcoins par bloc .On peut remarquer que c'est bénéfique pour les mineurs puisqu'ils gagnent de l'argent mais il est bénéfique aussi pour les autres utilisateurs.Comment ça ?  </p>
+
+
+                    <p>Dans le cas d'un système classique ou on a intermidiaire ,plus vous transférez de l'argent plus l'intermidiaire prend une grande commision . Cependant dans le cas de blockchain cela ne coûte que quelques centimes puisque les mineurs prennent de l'argent en fonction du nombre de bloc quelque soit le nombre de transactions dans le bloc et quelque soit les montants qui existent   </p>
 
                   
-                    <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+                  
                 </div>
             </div>
         </div>
