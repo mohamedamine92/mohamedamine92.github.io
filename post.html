@@ -116,12 +116,12 @@
                     </a>
 
                  <h2 class="section-heading">Principe de fonctionnement d'une blockchain</h2>
-                    <p>Pour assurer ce processus des individus ou des entreprises appelés mineurs mettent à disposition la puissance de clacul de leurs ordinateurs pour effectuer les calculs nécessaires au fonctionnement d'une blockchain.Cette puissance de calcul permet de vérifier la validité de toutes les transactions enregistrées dans une blockchain . Ces mineurs sont rémunérés en crypto-monnaie en échange de leurs puissances de calcul . En assurant la fiabilité de réseau les miliers de mineurs permettent à la blokchain de créer la confiance entre deux parties
+                    <p>Pour assurer ce processus des individus ou des entreprises appelés mineurs mettent à disposition la puissance de clacul de leurs ordinateurs pour effectuer les calculs nécessaires au fonctionnement d'une blockchain.Cette puissance de calcul permet de vérifier la validité de toutes les transactions enregistrées dans une blockchain . Ces mineurs sont rémunérés en crypto-monnaie en échange de leurs puissances de calcul . En assurant la fiabilité de réseau les milliers de mineurs permettent à la blokchain de créer la confiance entre deux parties
                     sans recourir à un tiers .</p>
 
                     <p>On va expliquer d'une manière simple l'idée de la blockchain en se basant sur le Bitcoin puisque le concepet de la blockchain a pris naissance avec cette monnaie éléctronique.</p>
 
-                    <p>Tout d'abord un point trés important est que la blokchain est un système  décentralisée càd la base de données de toutes les transactions  n'est pas gérée par une instance centrale comme une banque mais elle est partagée dans un immense réseau peer to peer .D’où tous les utilisateurs connectés au réseau peuvent héberger une copie de la base de données qui contiennent toutes les transactions. </p>
+                    <p>Tout d'abord un point trés important est que la blokchain est un système  décentralisé càd la base de données de toutes les transactions  n'est pas gérée par une instance centrale comme une banque mais elle est partagée dans un immense réseau peer to peer .D’où tous les utilisateurs connectés au réseau peuvent héberger une copie de la base de données qui contiennent toutes les transactions. </p>
 
                     <a href="#">
                         <img class="img-responsive" src="peer_to_peer.png" alt="">
@@ -138,7 +138,7 @@
     <blockquote>Chiffrage asymétrique : c'est le fait qu'on chiffre le message avec une clé et on le déchiffre avec une autre clé .</blockquote>
                     
                     <p>On parle donc de l'existance de deux clés :une publique que tous le monde peut obtenir et une  privée que seule la personne conçernée  possède. </p>
-                    <p>En fait la personne A chiffre avec sa clé privé le message de la transaction "Moi personne A je donne 2 Bitcoins à la personne B" et inscrit ce msg chiffré dans la base de données et les autres personnes peuvent déchiffrer le message avec la clé publique et comme ça on est sur que cette personne a inscrit cette transaction puisque c'est le seul qui a pu la chiffrer de cette façon.  </p>
+                    <p>En fait la personne A chiffre avec sa clé privé le message de la transaction "Moi personne A je donne 2 Bitcoins à la personne B" et inscrit ce msg chiffré dans la base de données et les autres personnes peuvent déchiffrer le message avec la clé publique et comme ça on est sur que cette personne a inscrit cette transaction puisque c'est la seule qui a pu la chiffrer de cette façon.  </p>
 
 
                    
@@ -149,20 +149,20 @@
                     <a href="#">
                         <img class="img-responsive" src="cle_priv_pub.png" alt="">
                     </a> 
-                     <blockquote>Shéma montrant que la clé privée doit être secrète et que tout le monde possède la clé publique .</blockquote>
+                     <blockquote>Schéma montrant que la clé privée doit être secrète et que tout le monde possède la clé publique .</blockquote>
 
 
                  <p>Maintenant un autre problème c'est qu'on a plein de copies de la base de données ce qui pose des soucies sur la manière dont ces copies se communiquent . Ce problème devient clair notamment dans le cas d'une tentative de déclaration d'une transaction deux fois dans le réseau dans des places différentes. Alors comment le système de la blockchain gère ça ? </p>
 
 
-                 <p>En fait chaque noeud du réseau enregistre les nouvelles transactions dans une liste en attente . Alors les noeuds possèdent des listes en attente différentes les unes des autres .A chaque 10 minutes un noeud prende sa liste en attente et la déclare validée et les autres noeuds se synchronisent avec ce noeud . Ainsi  chaque 10 minutes on a une liste ,qui s'appelle un bloc, qui sera validé  d'ou le nom blockchain ou chaine de blocs. </p>
+                 <p>En fait chaque noeud du réseau enregistre les nouvelles transactions dans une liste en attente . Alors les noeuds possèdent des listes en attente différentes les unes des autres .A chaque 10 minutes un noeud prende sa liste en attente et la déclare validée et les autres noeuds se synchronisent avec ce noeud . Ainsi  chaque 10 minutes on a une liste ,qui s'appelle un bloc, qui sera validée  d'ou le nom blockchain ou chaine de blocs. </p>
 
                  <a href="#">
                         <img class="img-responsive" src="noeud.png" alt="">
                     </a> 
                      <blockquote>Un noeud trouve son identifiant et déclare son bloc validé</blockquote>
 
-                 <p>Mais comment est élu le noeud qui va valider son bloc ? En fait chaque noeud essaye de trouver un identifiant de son bloc et ceci à travers une fonction de hashage qui prend en entrée un fichier contenant l'identifiant du bloc précédant , la liste des transactions et un nombre qui s'appelle nonce (ajouté pour des raisons de sécurité ) pour fabriquer ainsi avec une fonction de hashage son identifiant et cet identifiant va servir pour calculer l'identifiant du bloc suivant .</p>
+                 <p>Mais comment est élu le noeud qui va valider son bloc ? En fait chaque noeud essaye de trouver un identifiant de son bloc et ceci à travers une fonction de hashage qui prend en entrée un fichier contenant l'identifiant du bloc précédant , la liste des transactions et un nombre qui s'appelle nonce (ajouté pour des raisons de sécurité ) pour fabriquer ainsi avec  son identifiant . Cet identifiant va servir pour calculer l'identifiant du bloc suivant .</p>
                <a href="#">
                         <img class="img-responsive" src="hashage.png" alt="">
                     </a> 
@@ -178,7 +178,7 @@
                     <a href="#">
                         <img class="img-responsive" src="bloc_hash.png" alt="">
                     </a> 
-                     <blockquote>Shéma montrant le rôle du hashage dans la construction de la chaine des blocs. </blockquote>
+                     <blockquote>Schéma montrant le rôle du hashage dans la construction de la chaine des blocs. </blockquote>
 
                     </br>
 
@@ -198,14 +198,14 @@
                     <p>Comme on a dit auparavant , pour réaliser cette opération de validation, les mineurs utilisent des machines onéreuses et énergivores . Pour cette raison ils  sont rémunérés en conséquence par exemple aujourd'hui un mineur gagne 12,5 Bitcoins par bloc .On peut remarquer que c'est bénéfique pour les mineurs puisqu'ils gagnent de l'argent mais il est bénéfique aussi pour les autres utilisateurs.Comment ça ?  </p>
 
 
-                    <p>Dans le cas d'un système classique ou on a un intermidiaire ,plus vous transférez de l'argent plus l'intermédiaire prend une grande commision . Cependant dans le cas de blockchain cela ne coûte que quelques centimes puisque les mineurs prennent de l'argent en fonction du nombre de blocs quelque soit le nombre de transactions dans le bloc et quelque soit les montants qui existent.   </p>
+                    <p>Dans le cas d'un système classique ou on a un intermédiaire ,plus vous transférez de l'argent plus l'intermédiaire prend une grande commision . Cependant dans le cas de blockchain cela ne coûte que quelques centimes puisque les mineurs prennent de l'argent en fonction du nombre de blocs quelque soit le nombre de transactions dans le bloc et quelque soit les montants qui existent.   </p>
 
 
                     <h2 class="section-heading">Applications possibles de la blockchain  </h2>
 
                     <p>Au-delà des protocoles bancaires, la technologie blockchain pourrait être appliquée dans différents domaines sur la conjonction de trois concepts : le fonctionnement grâce à un réseau P2P, des données publiques et anonymes ainsi qu’un fonctionnement décentralisé et sécurisé. </p>
 
-                    <p>Evidemment il existe des idées qui restent loin de la réalité mais ça n'empêche pas que beaucoup d'aplications concrêtes apparaîssent . Voici des exemples :  </p>
+                    <p>Evidemment il existe des idées qui restent loin de la réalité mais ça n'empêche pas que beaucoup d'applications concrêtes apparaîssent . Voici des exemples :  </p>
 
 
                     <ul>
